@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/opasnostinet/lotus/issues"
   },
-  "homepage": "https://github.com/opasnostinet/lotus#readme"
+  "homepage": "https://github.com/opasnostinet/lotus#readme",
+  "devDependencies": {
+    "http-server": "^13.0.0"
+  }
 }
