@@ -74,3 +74,36 @@ body {
 }
 
 .header_logo {}
+
+.description, .app-heading {
+  text-align: center;
+}
+
+.app-qr {
+  background-color: #FFFFFF;
+  width: 150px;
+  height: 150px;
+}
+
+.apps {
+  display: flex;
+  justify-content: space-around;
+}
+
+.app-title {
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .header_logo {
+    display: none;
+  }
+  .header_number {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  .header_text {
+    font-size: 19px;
+    line-height: 24px;
+  }
+}
