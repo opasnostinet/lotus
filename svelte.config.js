@@ -7,6 +7,9 @@ const config = {
 	preprocess: preprocess({}),
 	kit: {
 		target: '#svelte',
+		paths: {
+			base: '/lotus',
+		},
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
