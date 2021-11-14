@@ -1,3 +1,12 @@
+<script>
+	import Lotus from './../components/lotus.svelte';
+
+	const array = [];
+	for (let i = 1; i < 22; i++) {
+		array.push(i);
+	}
+</script>
+
 <svelte:head>
 	<title>21 days meditation</title>
 </svelte:head>
@@ -9,91 +18,13 @@
 		<div class="logo_text">QWE</div>
 	</div>
 </header>
+
 <ul class="lotus-list">
-	<li class="lotus">
-		<img class="lotus_img" src="./img/lotus.png" alt="lotus" />
-		<h2 class="lotus_text">1</h2>
-	</li>
-	<li class="lotus">
-		<img class="lotus_img" src="./img/lotus.png" alt="lotus" />
-		<h2 class="lotus_text">2</h2>
-	</li>
-	<li class="lotus">
-		<img class="lotus_img" src="./img/lotus.png" alt="lotus" />
-		<h2 class="lotus_text">3</h2>
-	</li>
-	<li class="lotus">
-		<img class="lotus_img" src="./img/lotus.png" alt="lotus" />
-		<h2 class="lotus_text">4</h2>
-	</li>
-	<li class="lotus">
-		<img class="lotus_img" src="./img/lotus.png" alt="lotus" />
-		<h2 class="lotus_text">5</h2>
-	</li>
-	<li class="lotus">
-		<img class="lotus_img" src="./img/lotus.png" alt="lotus" />
-		<h2 class="lotus_text">6</h2>
-	</li>
-	<li class="lotus">
-		<img class="lotus_img" src="./img/lotus.png" alt="lotus" />
-		<h2 class="lotus_text">7</h2>
-	</li>
-	<li class="lotus">
-		<img class="lotus_img" src="./img/lotus.png" alt="lotus" />
-		<h2 class="lotus_text">8</h2>
-	</li>
-	<li class="lotus">
-		<img class="lotus_img" src="./img/lotus.png" alt="lotus" />
-		<h2 class="lotus_text">9</h2>
-	</li>
-	<li class="lotus">
-		<img class="lotus_img" src="./img/lotus.png" alt="lotus" />
-		<h2 class="lotus_text">10</h2>
-	</li>
-	<li class="lotus">
-		<img class="lotus_img" src="./img/lotus.png" alt="lotus" />
-		<h2 class="lotus_text">11</h2>
-	</li>
-	<li class="lotus">
-		<img class="lotus_img" src="./img/lotus.png" alt="lotus" />
-		<h2 class="lotus_text">12</h2>
-	</li>
-	<li class="lotus">
-		<img class="lotus_img" src="./img/lotus.png" alt="lotus" />
-		<h2 class="lotus_text">13</h2>
-	</li>
-	<li class="lotus">
-		<img class="lotus_img" src="./img/lotus.png" alt="lotus" />
-		<h2 class="lotus_text">14</h2>
-	</li>
-	<li class="lotus">
-		<img class="lotus_img" src="./img/lotus.png" alt="lotus" />
-		<h2 class="lotus_text">15</h2>
-	</li>
-	<li class="lotus">
-		<img class="lotus_img" src="./img/lotus.png" alt="lotus" />
-		<h2 class="lotus_text">16</h2>
-	</li>
-	<li class="lotus">
-		<img class="lotus_img" src="./img/lotus.png" alt="lotus" />
-		<h2 class="lotus_text">17</h2>
-	</li>
-	<li class="lotus">
-		<img class="lotus_img" src="./img/lotus.png" alt="lotus" />
-		<h2 class="lotus_text">18</h2>
-	</li>
-	<li class="lotus">
-		<img class="lotus_img" src="./img/lotus.png" alt="lotus" />
-		<h2 class="lotus_text">19</h2>
-	</li>
-	<li class="lotus">
-		<img class="lotus_img" src="./img/lotus.png" alt="lotus" />
-		<h2 class="lotus_text">20</h2>
-	</li>
-	<li class="lotus">
-		<img class="lotus_img" src="./img/lotus.png" alt="lotus" />
-		<h2 class="lotus_text">21</h2>
-	</li>
+	{#each array as item}
+		<li class="lotus">
+			<Lotus number={item} />
+		</li>
+	{/each}
 </ul>
 <p class="description">
 	Каждый день я медитирую. Несколько минут медитации помогают расслабиться и сконцентрироваться на
@@ -102,32 +33,16 @@
 <h3 class="app-heading">Приложение HeadSpace</h3>
 <div class="apps">
 	<div>
-		<img class="app-qr" src="img/qr_1.jpeg" alt="qr_code" />
+		<img class="app-qr" src="./img/qr_1.jpeg" alt="qr_code" />
 		<h3 class="app-title">IOS</h3>
 	</div>
 	<div>
-		<img class="app-qr" src="img/qr_2.png" alt="qr_code" />
+		<img class="app-qr" src="./img/qr_2.png" alt="qr_code" />
 		<h3 class="app-title">Android</h3>
 	</div>
 </div>
 
 <style>
-	.lotus {
-	}
-
-	.lotus_img {
-		width: 100px;
-		height: 100px;
-		filter: contrast(2) invert();
-	}
-
-	.lotus_text {
-		margin: 0;
-		font-size: 40px;
-		text-align: center;
-		line-height: 30px;
-	}
-
 	.logo {
 		padding: 10px;
 		width: 76px;
@@ -177,9 +92,6 @@
 		margin-bottom: 0;
 		font-size: 38px;
 		line-height: 48px;
-	}
-
-	.header_logo {
 	}
 
 	.description,
